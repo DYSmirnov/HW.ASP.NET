@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI;
 using MvcCreditApp1.Models;
 
 namespace MvcCreditApp1.Controllers
@@ -14,7 +15,9 @@ namespace MvcCreditApp1.Controllers
     {
         private CreditContext db = new CreditContext();
 
+
         // GET: Bids
+        [OutputCache(Duration = 60, Location = OutputCacheLocation.ServerAndClient)]
         public ActionResult Index()
         {
             return View(db.Bids.ToList());
@@ -50,6 +53,7 @@ namespace MvcCreditApp1.Controllers
         {
             if (ModelState.IsValid)
             {
+                bid.bidDate = DateTime.Now;
                 db.Bids.Add(bid);
                 db.SaveChanges();
                 return RedirectToAction("Index");
