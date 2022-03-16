@@ -1,0 +1,18 @@
+﻿@model WebMVCR1.Models.PersonRepository
+@{
+    ViewBag.Title = "Список участников";
+}
+
+<div>
+    <h3>Список участников</h3>
+    <p>Персон всего @ViewBag.Count</p>
+    <ul>
+        @foreach (var item in ViewBag.Pers)
+        {
+            <li>@item.ToString()</li>
+        }
+    </ul>
+    <p>
+        @Html.ActionLink("На главную", "Index")
+    </p>
+</div>
