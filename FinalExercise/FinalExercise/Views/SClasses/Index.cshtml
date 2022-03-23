@@ -1,0 +1,46 @@
+﻿@model IEnumerable<FinalExercise.Models.SClass>
+
+@{
+    ViewBag.Title = "Список студентов";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Добавить", "Create")
+</p>
+<table class="table-bordered" valign="middle">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Point)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Point)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.SClassId }) |
+            @Html.ActionLink("Детали", "Details", new { id=item.SClassId }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.SClassId })
+        </td>
+    </tr>
+}
+
+</table>

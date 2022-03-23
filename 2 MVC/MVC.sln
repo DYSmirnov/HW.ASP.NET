@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcDataViews", "MvcDataView
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcCreditApp1", "MvcCreditApp1\MvcCreditApp1.csproj", "{E063B068-88DF-41AD-8AFD-393B392C378B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcCreditApp", "MvcCreditApp\MvcCreditApp.csproj", "{730F5A6F-F7B6-47D9-AAA3-739270A6BDE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E063B068-88DF-41AD-8AFD-393B392C378B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E063B068-88DF-41AD-8AFD-393B392C378B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E063B068-88DF-41AD-8AFD-393B392C378B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{730F5A6F-F7B6-47D9-AAA3-739270A6BDE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{730F5A6F-F7B6-47D9-AAA3-739270A6BDE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{730F5A6F-F7B6-47D9-AAA3-739270A6BDE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{730F5A6F-F7B6-47D9-AAA3-739270A6BDE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

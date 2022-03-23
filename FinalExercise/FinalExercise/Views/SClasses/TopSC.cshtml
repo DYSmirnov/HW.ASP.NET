@@ -1,0 +1,44 @@
+﻿@model FinalExercise.Models.ResModel
+@{
+    ViewData["Title"] = "Лучшие и худшие";
+}
+<h2>@ViewData["Title"].</h2>
+
+<h2>Лучшие</h2>
+<table class="table-bordered">
+    <tr>
+        <th>ФИО</th>
+        <th>Сумма балов</th>
+    </tr>
+    @foreach (var item in ViewBag.Top)
+    {
+        <tr>
+            <td>
+                @(item.ResName)
+            </td>
+            <td>
+                @(item.ResRes)
+            </td>
+        </tr>
+    }
+</table>
+
+<h2>Худшие</h2>
+<table class="table-bordered" valign="middle">
+    <tr>
+        <th>ФИО</th>
+        <th>Сумма балов</th>
+    </tr>
+    @foreach (var item in ViewBag.Bad)
+    {
+        <tr>
+            <td>
+                @(item.ResName)
+            </td>
+            <td>
+                @(item.ResRes)
+            </td>
+        </tr>
+    }
+</table>
+

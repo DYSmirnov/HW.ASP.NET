@@ -1,0 +1,25 @@
+﻿@model FinalExercise.Models.ResModel
+@{
+    ViewData["Title"] = "Сумма баллов";
+}
+<h2>@ViewData["Title"].</h2>
+
+
+<table class="table-bordered" valign="middle">
+    <tr>
+        <th>ФИО</th>
+        <th>Сумма балов</th>
+    </tr>
+    @foreach (var item in ViewBag.Res)
+    {
+        <tr>
+            <td>
+                @(item.ResName)
+            </td>
+            <td>
+                @(item.ResRes)
+            </td>
+        </tr>
+    }
+</table>
+
